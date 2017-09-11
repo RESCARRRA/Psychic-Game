@@ -41,7 +41,7 @@ document.onkeyup = function(event) {
       resetGame();
     }
     // Updates pushed to HTML via the function document.querySelector() which selects the <html> element and stores a reference to it via variable with same name — enabling score updates as the user progresses in game :) 
-    var html = "<p><h4>Guess what letter I\'m thinking of</h4></p>" + "<p><h4>Wins: " + wins + "</h4></p>" + "<p><h4>Losses: " + losses + "</h4></p>" + "<p><h4>Guesses Left: " + guessesRemain + "</h4></p>" + "<p><h4>Your guesses so far: " + guessesUsed + "</h4></p>";
+    var html = "<p><h4>Guess what letter I\'m thinking of...</h4></p>" + "<p><h4>Wins: " + wins + "</h4></p>" + "<p><h4>Losses: " + losses + "</h4></p>" + "<p><h4>Guesses Left: " + guessesRemain + "</h4></p>" + "<p><h4>Your guesses so far: " + guessesUsed + "</h4></p>";
     document.querySelector("#game").innerHTML = html;
   }
   //Rather than including several lines of code after the win or loss conditionals, the reset funcntion handles all that jazz! 
