@@ -1,0 +1,14 @@
+
+body {
+	background-image: url("../images/starz.gif");
+	background-color: #3B0070;
+	color: #96a;
+}
+.jumbotron {
+	margin-top: 50px;
+	height: 100%;
+	border: 1px solid #96a;
+}
+.jumbotron, .row {
+	background-color: #080808;
+}
