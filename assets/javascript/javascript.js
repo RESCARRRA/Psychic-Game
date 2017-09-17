@@ -12,7 +12,7 @@ var userGuess = [];
 var mysteryLetter = abc[Math.floor(Math.random() * abc.length)];
 console.log(" mysteryChoice: " + mysteryLetter);
 // When a key is pressed, the event function is triggered
-document.onkeyup = function(event) {
+ document.onkeyup = function(event) {
     // When user presses key/guesses letter, the letter is converted to lowercase and saveed to variable userGuess
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase(" " + userGuess);
     // Conditional: if the userGuess is unique/new letter and an alphabetical character/letter...
@@ -40,8 +40,9 @@ document.onkeyup = function(event) {
       // ...game resets
       resetGame();
     }
-    // Updates pushed to HTML via the function document.querySelector() which selects the <html> element and stores a reference to it via variable with same name — enabling score updates as the user progresses in game :) 
-    var html = "<p><h4>Guess what letter I\'m thinking of...</h4></p>" + "<p><h4>Wins: " + wins + "</h4></p>" + "<p><h4>Losses: " + losses + "</h4></p>" + "<p><h4>Guesses Left: " + guessesRemain + "</h4></p>" + "<p><h4>Your guesses so far: " + guessesUsed + "</h4></p>";
+    // The querySelector() method returns the first child element that matches specifications of element
+    // below, it selects the <html> element and stores a reference to it via variable with same name — enabling score updates as the user progresses in game :) 
+    var html = "<p><h3>Guess what letter I am thinking of...</h3></p>" + "<p><h3>Wins: " + wins + "</h3></p>" + "<p><h3>Losses: " + losses + "</h3></p>" + "<p><h3>Guesses Left: " + guessesRemain + "</h3></p>" + "<p><h3>Your guesses so far: " + guessesUsed + "</h3></p>";
     document.querySelector("#game").innerHTML = html;
   }
   //Rather than including several lines of code after the win or loss conditionals, the reset funcntion handles all that jazz! 
@@ -49,5 +50,5 @@ function resetGame() {
   guessesRemain = 9;
   guessesUsed = [];
   mysteryLetter = abc[Math.floor(Math.random() * abc.length)];
-  console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + guessesRemain + " Guesses so far: " + guessesUsed + " mysteryChoice: " + mysteryLetter);
-}
+  console.log(" mysteryChoice: " + mysteryLetter);
+}s
